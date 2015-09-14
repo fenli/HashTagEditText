@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HashTagEditText">
+        <attr name="horizontalSpacing" format="reference|dimension" />
+        <attr name="verticalSpacing" format="reference|dimension" />
+        <attr name="horizontalPadding" format="reference|dimension" />
+        <attr name="verticalPadding" format="reference|dimension" />
+        <attr name="maxSize" format="integer" />
+        <attr name="bubbleTextColor" format="reference|color" />
+        <attr name="bubbleTextSize" format="reference|dimension" />
+        <attr name="bubbleBackground" format="reference|color" />
+    </declare-styleable>
+</resources>
