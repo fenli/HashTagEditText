@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.fenlisproject.hashtagedittext:library:1.0.0'
+    implementation 'HashTagEditText:library:1.0.0'
 }
 ```
 
