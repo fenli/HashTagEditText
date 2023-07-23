@@ -16,13 +16,13 @@ dependencies {
 ## How to Use
 #### XML:
 ```xml
-<com.fenli.hashtagedittext.HashTagEditText
+<id.fenli.hashtagedittext.HashTagEditText
     android:id="@+id/tag_input"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 ```
 ```xml
-<com.fenli.hashtagedittext.HashTagEditText
+<id.fenli.hashtagedittext.HashTagEditText
     android:id="@+id/tag_input"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
