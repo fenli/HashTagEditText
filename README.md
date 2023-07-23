@@ -3,7 +3,7 @@ HashTagEditText
 
 EditText for multiple tags input.
 
-![Screenshot] (https://lh3.googleusercontent.com/az5qta7BY6rt1GJ1ZuHIaOxW2kVPg9510_igrcluyPBzhltUWcM=w443-h738-no)
+![Demo](https://github.com/fenli/HashTagEditText/assets/5110285/e7150cbd-0e9c-49f6-a563-06b81320184e)
 
 ## Importing the library
 You can import this library to your project by adding following dependency to your `build.gradle`:
@@ -14,15 +14,13 @@ dependencies {
 ```
 
 ## How to Use
-Basic:
+#### XML:
 ```xml
 <com.fenli.hashtagedittext.HashTagEditText
     android:id="@+id/tag_input"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 ```
-
-All attributes:
 ```xml
 <com.fenli.hashtagedittext.HashTagEditText
     android:id="@+id/tag_input"
@@ -38,29 +36,33 @@ All attributes:
     app:verticalSpacing="2dp" />
 ```
 
-Usage in code:
+| View Attribute    | Type              | Description                            |
+|-------------------|-------------------|----------------------------------------|
+| bubbleTextColor   | Color             | Text color for each bubble             |
+| bubbleTextSize    | Dimen             | Text size for each bubble              |
+| horizontalPadding | Dimen             | Left and right padding for each bubble |
+| verticalPadding   | Dimen             | Top and bottom padding for each bubble |
+| horizontalSpacing | Dimen             | Top and bottom padding for each bubble |
+| verticalSpacing   | Dimen             | Top and bottom padding for each bubble |
+| maxSize           | Int               | Maximum tag allowed to enter           |
+| bubbleBackground  | Drawable or Color | Custom background for bubble           |
+
+#### Code:
 ```kotlin
-// Insert tag
-hashTagInput.appendTag("hello")
+// Insert single tag
+hashTagEditText.appendTag("hello")
 
 // Insert multiple tags
-hashTagInput.appendTags(
+hashTagEditText.appendTags(
     listOf("android", "kotlin", "tags", "edit-text")
 )
 
-// Get tags value
-val allTags = hashTagInput.values
-```
+// Get tags value as list of string
+val allTags = hashTagEditText.values
 
-##### View Attributes:
-- bubbleTextColor : Text color for each bubble
-- bubbleTextSize : Text size for each bubble
-- horizontalPadding : Left and right padding for each bubble
-- verticalPadding : Top and bottom padding for each bubble
-- horizontalSpacing : left-right margin between bubble
-- verticalSpacing : top-bottom margin between bubble
-- maxSize : Maximum tag allowed to enter
-- bubbleBackground : Custom background for bubble
+// Don't set text directly like this (not supported yet)
+// hashTagEditText.setText("android,kotlin")
+```
 
 License
 -------
