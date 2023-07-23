@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HashTagEditText Demo</string>
+    <string name="label_tag_prompt">Please input multiple tags (press enter, space, or comma to confirm):</string>
+</resources>
