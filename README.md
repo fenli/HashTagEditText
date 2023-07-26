@@ -9,20 +9,20 @@ EditText for multiple tags input.
 You can import this library to your project by adding following dependency to your `build.gradle`:
 ```gradle
 dependencies {
-    implementation 'id.fenli.hashtagedittext:library:1.0.0'
+    implementation 'id.stevenlewi:hashtag-edittext:1.0.1'
 }
 ```
 
 ## How to Use
 #### XML:
 ```xml
-<id.fenli.hashtagedittext.HashTagEditText
+<id.stevenlewi.hashtagedittext.HashTagEditText
     android:id="@+id/tag_input"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 ```
 ```xml
-<id.fenli.hashtagedittext.HashTagEditText
+<id.stevenlewi.hashtagedittext.HashTagEditText
     android:id="@+id/tag_input"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -53,9 +53,8 @@ dependencies {
 hashTagEditText.appendTag("hello")
 
 // Insert multiple tags
-hashTagEditText.appendTags(
-    listOf("android", "kotlin", "tags", "edit-text")
-)
+hashTagEditText.appendTags("android", "kotlin", "tags", "edit-text")
+hashTagEditText.appendTags(listOf("github", "opensource"))
 
 // Get tags value as list of string
 val allTags = hashTagEditText.values

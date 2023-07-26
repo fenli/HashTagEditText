@@ -6,10 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'id.fenli.hashtagedittext'
+    namespace 'id.stevenlewi.hashtagedittext'
     compileSdk 33
 
     defaultConfig {
+        versionName "1.0.1"
         minSdk 21
         targetSdk 33
 
@@ -33,7 +34,6 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
 
     testImplementation 'junit:junit:4.13.2'
@@ -41,12 +41,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
 
-// Publishing configuration
-ext {
-    PUBLISH_GROUP_ID = 'id.fenli.hashtagedittext'
-    PUBLISH_VERSION = '1.0.0'
-    PUBLISH_ARTIFACT_ID = 'library'
-    SITE_URL = 'https://github.com/fenli/HashTagEditText'
-    GIT_URL = 'https://github.com/fenli/HashTagEditText.git'
-}
 apply from: 'maven-publish.gradle'

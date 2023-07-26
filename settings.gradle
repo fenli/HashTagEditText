@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "HashTagEditText"
+rootProject.name = "hashtag-edittext"
 include ':app'
-include ':library'
+include ':hashtag-edittext'

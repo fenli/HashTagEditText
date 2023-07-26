@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'id.fenli.hashtagedittext.sampleapp'
+    namespace 'id.stevenlewi.hashtagedittext.sampleapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "id.fenli.hashtagedittext.sampleapp"
+        applicationId "id.stevenlewi.hashtagedittext.sampleapp"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -44,7 +44,7 @@ android {
 }
 
 dependencies {
-    implementation project(":library")
+    implementation project(":hashtag-edittext")
 
     implementation "androidx.appcompat:appcompat:1.6.1"
     implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')

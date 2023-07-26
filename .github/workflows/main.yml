@@ -28,7 +28,7 @@ jobs:
         run: chmod +x gradlew
       - name: Publish snapshots to Maven Central
         if: ${{ github.ref == 'refs/heads/main' }}
-        run: ./gradlew clean :library:publishReleasePublicationToSonatypeRepository -Psnapshot
+        run: ./gradlew clean :hashtag-edittext:publishReleasePublicationToSonatypeRepository -Psnapshot
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
@@ -38,7 +38,7 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
       - name: Publish staging to Maven Central
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        run: ./gradlew clean :library:publishReleasePublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository
+        run: ./gradlew clean :hashtag-edittext:publishReleasePublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}

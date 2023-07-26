@@ -1,5 +1,5 @@
-project.group = PUBLISH_GROUP_ID
-project.version = PUBLISH_VERSION + (project.hasProperty("snapshot") ? '-SNAPSHOT' : '')
+project.group = 'id.stevenlewi'
+project.version = android.defaultConfig.versionName + (project.hasProperty("snapshot") ? '-SNAPSHOT' : '')
 
 task androidSourcesJar(type: Jar) {
     archiveClassifier.set('sources')
@@ -23,7 +23,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 groupId project.group
-                artifactId project.name
+                artifactId rootProject.name
                 version project.version
 
                 // Artifacts
@@ -52,9 +52,9 @@ afterEvaluate {
                         }
                     }
                     scm {
-                        connection = GIT_URL
-                        developerConnection = GIT_URL
-                        url = SITE_URL
+                        connection = 'https://github.com/fenli/HashTagEditText.git'
+                        developerConnection = 'https://github.com/fenli/HashTagEditText.git'
+                        url = 'https://github.com/fenli/HashTagEditText'
                     }
                 }
             }

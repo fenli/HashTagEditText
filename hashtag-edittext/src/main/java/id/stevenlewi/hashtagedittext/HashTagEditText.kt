@@ -13,7 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package id.fenli.hashtagedittext
+package id.stevenlewi.hashtagedittext
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -161,6 +161,10 @@ class HashTagEditText : AppCompatEditText {
         tags.forEach { appendTag(it) }
     }
 
+    fun appendTags(vararg tags: String) {
+        appendTags(*tags)
+    }
+
     val values: List<String>
         get() {
             val values: MutableList<String> = ArrayList()
@@ -205,7 +209,7 @@ class HashTagEditText : AppCompatEditText {
             /* config = */ Bitmap.Config.ARGB_8888
         )
         val c = Canvas(b)
-        c.translate(-bubbleRootView.scrollX.toFloat(), -bubbleRootView!!.scrollY.toFloat())
+        c.translate(-bubbleRootView.scrollX.toFloat(), -bubbleRootView.scrollY.toFloat())
         bubbleRootView.draw(c)
         bubbleRootView.isDrawingCacheEnabled = true
         val cacheBmp = bubbleRootView.drawingCache
